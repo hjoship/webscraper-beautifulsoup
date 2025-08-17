@@ -1,0 +1,53 @@
+{
+  "scraper_settings": {
+    "default_delay_range": [1, 3],
+    "default_timeout": 10,
+    "max_retries": 3,
+    "default_headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+      "Accept-Language": "en-US,en;q=0.5",
+      "Accept-Encoding": "gzip, deflate",
+      "Connection": "keep-alive"
+    }
+  },
+  "output_settings": {
+    "csv_encoding": "utf-8",
+    "json_indent": 2,
+    "json_ensure_ascii": false
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(levelname)s - %(message)s"
+  },
+  "example_sites": {
+    "quotes": {
+      "url": "http://quotes.toscrape.com/",
+      "selectors": {
+        "quote_container": "div.quote",
+        "text": "span.text",
+        "author": "small.author",
+        "tags": "a.tag"
+      }
+    },
+    "news_example": {
+      "url": "https://example-news.com",
+      "selectors": {
+        "article_container": ".article",
+        "title": ".article-title",
+        "content": ".article-content",
+        "date": ".article-date"
+      }
+    },
+    "ecommerce_example": {
+      "url": "https://example-shop.com",
+      "selectors": {
+        "product_container": ".product-item",
+        "name": ".product-name",
+        "price": ".product-price",
+        "image": ".product-image img",
+        "rating": ".product-rating"
+      }
+    }
+  }
+}
